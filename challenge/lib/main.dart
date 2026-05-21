@@ -62,7 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.all(16.0),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    storyBrain.nextStory(1);
+                  },
                   child: Text(
                     storyBrain.getChoice1(),
                     style: TextStyle(fontSize: 20.0),
@@ -78,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.all(16.0),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    storyBrain.nextStory(2);
+                  },
                   child: Text(
                     storyBrain.getChoice2(),
                     style: TextStyle(fontSize: 20.0),
