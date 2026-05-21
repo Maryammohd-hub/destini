@@ -1,7 +1,11 @@
 class Story {
-  late String storyTitle;
-  late String choise1;
-  late String choice2;
+  String storyTitle;
+  String choice1;
+  String choice2;
 
-  Story(this.storyTitle, this.choise1, this.choice2);
+  Story({
+    required this.storyTitle,
+    required this.choice1,
+    required this.choice2,
+  });
 }
