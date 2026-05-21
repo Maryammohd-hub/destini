@@ -76,20 +76,23 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 20.0),
               Expanded(
                 flex: 2,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.all(16.0),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      storyBrain.nextStory(2);
-                    });
-                  },
-                  child: Text(
-                    storyBrain.getChoice2(),
-                    style: TextStyle(fontSize: 20.0),
+                child: Visibility(
+                  visible: storyBrain.buttonShouldBeVisible(),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.all(16.0),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        storyBrain.nextStory(2);
+                      });
+                    },
+                    child: Text(
+                      storyBrain.getChoice2(),
+                      style: TextStyle(fontSize: 20.0),
+                    ),
                   ),
                 ),
               ),
