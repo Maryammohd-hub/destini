@@ -63,7 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(16.0),
                   ),
                   onPressed: () {
-                    storyBrain.nextStory(1);
+                    setState(() {
+                      storyBrain.nextStory(1);
+                    });
                   },
                   child: Text(
                     storyBrain.getChoice1(),
@@ -81,7 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(16.0),
                   ),
                   onPressed: () {
-                    storyBrain.nextStory(2);
+                    setState(() {
+                      storyBrain.nextStory(2);
+                    });
                   },
                   child: Text(
                     storyBrain.getChoice2(),
