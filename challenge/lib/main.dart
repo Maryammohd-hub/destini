@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    'Story text will go here.',
+                    storyBrain.getStory(),
                     style: TextStyle(fontSize: 25.0),
                   ),
                 ),
@@ -63,7 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(16.0),
                   ),
                   onPressed: () {},
-                  child: Text('Choice 1', style: TextStyle(fontSize: 20.0)),
+                  child: Text(
+                    storyBrain.getChoice1(),
+                    style: TextStyle(fontSize: 20.0),
+                  ),
                 ),
               ),
               SizedBox(height: 20.0),
@@ -76,7 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(16.0),
                   ),
                   onPressed: () {},
-                  child: Text('Choice 2', style: TextStyle(fontSize: 20.0)),
+                  child: Text(
+                    storyBrain.getChoice2(),
+                    style: TextStyle(fontSize: 20.0),
+                  ),
                 ),
               ),
             ],
